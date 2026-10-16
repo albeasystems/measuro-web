@@ -143,7 +143,7 @@ export const content = {
         ],
       },
     },
-    a11y: { skip: 'Skip to content', langSwitch: 'Switch to Spanish' },
+    a11y: { skip: 'Skip to content', langSwitch: 'Switch to Spanish', langGroup: 'Language' },
   },
 
   es: {
@@ -277,6 +277,6 @@ export const content = {
         ],
       },
     },
-    a11y: { skip: 'Saltar al contenido', langSwitch: 'Cambiar a inglés' },
+    a11y: { skip: 'Saltar al contenido', langSwitch: 'Cambiar a inglés', langGroup: 'Idioma' },
   },
 };

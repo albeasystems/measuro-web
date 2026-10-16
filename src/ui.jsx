@@ -75,16 +75,22 @@ export function Header({ t, alt }) {
           <a className="nav-link hidden md:inline-flex" href={`${t.home}#features`}>{t.nav.features}</a>
           <a className="nav-link hidden md:inline-flex" href={`${t.home}#categories`}>{t.nav.categories}</a>
           <a className="nav-link hidden lg:inline-flex" href={`${t.home}#faq`}>{t.nav.faq}</a>
-          <a
-            className="nav-link nav-chip"
-            href={otherLang.href}
-            hrefLang={otherLang.code}
-            lang={otherLang.code}
-            aria-label={t.a11y.langSwitch}
-            title={otherLang.name}
-          >
-            {otherLang.label}
-          </a>
+          <div className="lang-switch" role="group" aria-label={t.a11y.langGroup}>
+            {[
+              { code: 'en', label: 'EN', name: 'English' },
+              { code: 'es', label: 'ES', name: 'Español' },
+            ].map((l) =>
+              l.code === t.htmlLang ? (
+                <span key={l.code} className="lang-current" aria-current="true" lang={l.code} title={l.name}>
+                  {l.label}
+                </span>
+              ) : (
+                <a key={l.code} className="lang-link" href={otherLang.href} hrefLang={l.code} lang={l.code} aria-label={t.a11y.langSwitch} title={l.name}>
+                  {l.label}
+                </a>
+              ),
+            )}
+          </div>
           <a className="btn btn-sm" href={APP_STORE} rel="noopener">{t.nav.get}</a>
         </nav>
       </div>
