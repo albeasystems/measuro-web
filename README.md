@@ -23,3 +23,10 @@ Apple, iPhone and App Store are trademarks of Apple Inc. Measuro is an independe
 - 12 conversion pages per language (`src/convert.js`); every number is computed from exact definitions.
 - The site address lives in `src/site.js` (`ORIGIN`). With a custom domain, change it and build with `BASE_PATH=/`.
 - Crawlers only read `robots.txt` at the domain root. On `albeasystems.github.io/measuro-web/` that file is ignored; submit `sitemap.xml` in Search Console instead, or use a custom domain.
+
+## Custom domain
+
+1. Buy or pick the domain, then in the repo go to Settings > Pages > Custom domain and enter it. Add the DNS records GitHub lists (an `A`/`AAAA` set for an apex domain, or a `CNAME` to `albeasystems.github.io` for a subdomain such as `www`). Tick Enforce HTTPS once it is offered.
+2. In Settings > Secrets and variables > Actions > Variables, create `SITE_ORIGIN` (for example `https://measuro.app`) and `BASE_PATH` with the value `/`.
+3. Re-run the "Deploy site" workflow. Canonical URLs, `hreflang`, the sitemap, JSON-LD, `robots.txt` (now at the domain root, where crawlers read it) and the `CNAME` file all follow.
+4. In Search Console add the domain and submit `sitemap.xml`.

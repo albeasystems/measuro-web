@@ -93,6 +93,10 @@ write(
 `,
 );
 
+// A custom domain needs a CNAME file next to the site, or GitHub Pages forgets it on every deploy.
+const custom = process.env.VITE_SITE_ORIGIN;
+if (custom && !/github\.io/.test(custom)) write('CNAME', `${new URL(custom).hostname}\n`);
+
 const today = new Date().toISOString().slice(0, 10);
 write('sitemap.xml', ssr.sitemapXml(today));
 write('robots.txt', ssr.robotsTxt());

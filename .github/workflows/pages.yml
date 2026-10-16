@@ -26,7 +26,11 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          BASE_PATH: /measuro-web/
+          # Repository variables (Settings > Secrets and variables > Actions > Variables).
+          # Unset: the project URL https://albeasystems.github.io/measuro-web/. With a custom domain:
+          # SITE_ORIGIN=https://your-domain and BASE_PATH=/
+          BASE_PATH: ${{ vars.BASE_PATH || '/measuro-web/' }}
+          VITE_SITE_ORIGIN: ${{ vars.SITE_ORIGIN }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

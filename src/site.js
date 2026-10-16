@@ -1,6 +1,6 @@
-// Where the site lives. Change ORIGIN (and build with BASE_PATH=/) when a custom domain is connected;
-// every canonical URL, hreflang, sitemap entry and JSON-LD value follows from these two lines.
-export const ORIGIN = 'https://albeasystems.github.io';
+// Where the site lives. Set the repository variables SITE_ORIGIN (e.g. https://measuro.app) and BASE_PATH (/)
+// when a custom domain is connected; every canonical URL, hreflang, sitemap entry and JSON-LD value follows.
+export const ORIGIN = import.meta.env.VITE_SITE_ORIGIN || 'https://albeasystems.github.io';
 export const BASE = import.meta.env.BASE_URL;
 export const SITE_NAME = 'Measuro';
 export const PUBLISHER = 'Albea Systems';
