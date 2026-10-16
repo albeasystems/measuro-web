@@ -1,17 +1,21 @@
 import { BASE, CATEGORY_COLORS, DIVIX_STORE } from './content.js';
+import { PAIRS, describe } from './convert.js';
 import { Arrow, Footer, HappyPath, Header, Phone, StoreLink } from './ui.jsx';
 
-export default function Home({ lang, t }) {
+export default function Home({ lang, t, alt }) {
   const media = `${BASE}media/${lang}`;
   return (
     <>
       <a className="btn btn-sm skip" href="#main">{t.a11y.skip}</a>
-      <Header t={t} />
+      <Header t={t} alt={alt} />
       <main id="main">
         <Hero lang={lang} t={t} />
         <Demo media={media} t={t} />
+        <Widget media={media} t={t} />
         <Features t={t} />
         <Categories t={t} />
+        <Popular lang={lang} t={t} />
+        <Faq t={t} />
         <FreeAndDivix t={t} />
         <FinalCta t={t} />
       </main>
@@ -145,6 +149,56 @@ function FinalCta({ t }) {
         <h2 className="display !text-[clamp(2.2rem,5.5vw,4rem)] max-w-[16ch]">{t.final.title}</h2>
         <StoreLink t={t}>{t.final.cta}</StoreLink>
       </div>
+    </section>
+  );
+}
+
+function Widget({ media, t }) {
+  return (
+    <section className="wrap section grid gap-12 md:grid-cols-2 md:items-center md:gap-20" aria-labelledby="widget-title">
+      <div className="grid gap-5 content-center">
+        <h2 id="widget-title" className="title max-w-[14ch]">{t.widget.title}</h2>
+        <p className="lead">{t.widget.lead}</p>
+      </div>
+      <div className="justify-self-center">
+        <Phone src={`${media}/05-widget.webp`} alt={t.widget.alt} />
+      </div>
+    </section>
+  );
+}
+
+function Popular({ lang, t }) {
+  return (
+    <section id="popular" className="band section scroll-mt-14" aria-labelledby="popular-title">
+      <div className="wrap grid gap-10">
+        <div className="grid gap-3">
+          <h2 id="popular-title" className="title max-w-[18ch]">{t.popular.title}</h2>
+          <p className="lead">{t.popular.lead}</p>
+        </div>
+        <ul className="list-none p-0 m-0 grid gap-x-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {PAIRS.map((p) => (
+            <li key={p.id} className="border-t border-line">
+              <a className="link link-block" href={`${BASE}${lang}/convert/${p.slug[lang]}/`}>{describe(p, lang).h1}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function Faq({ t }) {
+  return (
+    <section id="faq" className="wrap-narrow section scroll-mt-14" aria-labelledby="faq-title">
+      <h2 id="faq-title" className="title mb-10">{t.faq.title}</h2>
+      <dl className="m-0">
+        {t.faq.items.map(([q, a]) => (
+          <div key={q} className="border-t border-line py-6 grid gap-2">
+            <dt className="font-semibold text-[1.15rem] tracking-tight">{q}</dt>
+            <dd className="m-0 text-muted">{a}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

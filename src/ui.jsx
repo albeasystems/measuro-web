@@ -62,8 +62,8 @@ export function StoreLink({ children, t }) {
   );
 }
 
-export function Header({ t }) {
-  const { otherLang } = t;
+export function Header({ t, alt }) {
+  const otherLang = alt ? { ...t.otherLang, href: alt } : t.otherLang;
   return (
     <header className="border-b border-line bg-paper sticky top-0 z-40">
       <div className="wrap flex h-14 items-center justify-between gap-4">
@@ -74,6 +74,7 @@ export function Header({ t }) {
         <nav className="flex items-center gap-4 sm:gap-6" aria-label="Measuro">
           <a className="nav-link hidden md:inline" href={`${t.home}#features`}>{t.nav.features}</a>
           <a className="nav-link hidden md:inline" href={`${t.home}#categories`}>{t.nav.categories}</a>
+          <a className="nav-link hidden lg:inline" href={`${t.home}#faq`}>{t.nav.faq}</a>
           <a
             className="nav-link nav-chip"
             href={otherLang.href}

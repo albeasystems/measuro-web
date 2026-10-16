@@ -16,7 +16,7 @@ export const content = {
     htmlLang: 'en',
     otherLang: { code: 'es', label: 'ES', name: 'Español', href: `${BASE}es/` },
     home: `${BASE}en/`,
-    nav: { features: 'What it does', categories: 'Categories', get: 'Get the app' },
+    nav: { features: 'What it does', categories: 'Categories', faq: 'FAQ', get: 'Get the app' },
     hero: {
       headline: ['Type once.', 'Every unit answers.'],
       sub: 'Measuro is a free unit converter for iPhone. Enter a value and see it in every unit of the category at the same time. A calculator is built in, and it works offline.',
@@ -56,7 +56,7 @@ export const content = {
         ['Kitchen to workshop', 'Cups, shoe sizes and running pace sit next to pressure, torque and voltage.'],
         ['Your own list', 'Star the units you use and reorder them. Recent conversions wait on the home screen.'],
         ['Shortcuts and widget', 'Ask Siri or build a Shortcut. Put a conversion on your Home Screen.'],
-        ['Speaks your language', 'Available in about 14 languages.'],
+        ['Speaks your language', 'Available in 14 languages.'],
       ],
     },
     cats: {
@@ -69,6 +69,26 @@ export const content = {
         'Acceleration', 'Radioactivity', 'Radiation dose',
       ],
     },
+    widget: {
+      title: 'Your Home Screen, converted.',
+      lead: 'Add the Measuro widget and see a conversion without opening the app. Leave it empty to follow your favorite units, or pick a pair and a value. There are Lock Screen versions too.',
+      alt: 'iPhone Home Screen with the Measuro widget converting 1 metric ton into kilograms, grams, milligrams and micrograms.',
+    },
+    popular: { title: 'Popular conversions', lead: 'Quick answers, with the formula and a chart.' },
+    faq: {
+      title: 'Questions about Measuro',
+      items: [
+        ['What is Measuro?', 'Measuro is a free unit converter for iPhone. You type a value once and see it converted into every unit of the category at the same time. It covers 29 categories and 271 units, includes a calculator, and works offline.'],
+        ['Is Measuro free?', 'Yes. Measuro is free to download and use, and it is supported by ads. A one-time Remove Ads purchase takes them away for good.'],
+        ['Does Measuro work offline?', 'Yes. Every conversion is calculated on your iPhone, so you do not need an internet connection.'],
+        ['Which units can Measuro convert?', 'Twenty-nine categories: length, area, volume, mass, speed, temperature, cooking, pace, shoe size, pressure, energy, power, time, digital storage, data rate, fuel efficiency, angle, force, torque, frequency, density, flow rate, illuminance, electric current, voltage, viscosity, acceleration, radioactivity and radiation dose.'],
+        ['Can Measuro convert currencies?', 'No. Measuro converts units, not money. For exchange rates, Albea Systems also makes Divix, a free currency converter.'],
+        ['Does Measuro have a widget?', 'Yes. A Home Screen widget shows a conversion. Leave it empty to follow your favorite units, or choose a pair of units and a value. Lock Screen widgets, Siri and Shortcuts are supported too.'],
+        ['Which languages does Measuro support?', 'Fourteen: English, Spanish, French, German, Italian, Portuguese (Brazil), Russian, Arabic, Hindi, Thai, Vietnamese, Japanese, Korean and Simplified Chinese.'],
+        ['Who makes Measuro?', 'Measuro is made by Albea Systems, an independent developer.'],
+      ],
+    },
+    convert: { back: 'All conversions', home: 'Measuro' },
     free: {
       title: 'Free to use',
       body: 'Measuro is free and supported by ads. A one-time Remove Ads purchase takes them away for good.',
@@ -130,7 +150,7 @@ export const content = {
     htmlLang: 'es',
     otherLang: { code: 'en', label: 'EN', name: 'English', href: `${BASE}en/` },
     home: `${BASE}es/`,
-    nav: { features: 'Qué hace', categories: 'Categorías', get: 'Descargar' },
+    nav: { features: 'Qué hace', categories: 'Categorías', faq: 'Preguntas', get: 'Descargar' },
     hero: {
       headline: ['Escribe una vez.', 'Responden todas las unidades.'],
       sub: 'Measuro es un conversor de unidades gratis para iPhone. Escribe un valor y míralo a la vez en todas las unidades de la categoría. Lleva calculadora integrada y funciona sin conexión.',
@@ -170,7 +190,7 @@ export const content = {
         ['De la cocina al taller', 'Tazas, tallas de calzado y ritmo de carrera conviven con presión, par motor y tensión.'],
         ['Tu propia lista', 'Marca con estrella las unidades que usas y reordénalas. Las conversiones recientes te esperan en la pantalla de inicio.'],
         ['Atajos y widget', 'Pídeselo a Siri o crea un atajo. Pon una conversión en tu pantalla de inicio.'],
-        ['En tu idioma', 'Disponible en unos 14 idiomas.'],
+        ['En tu idioma', 'Disponible en 14 idiomas.'],
       ],
     },
     cats: {
@@ -183,6 +203,26 @@ export const content = {
         'Aceleración', 'Radiactividad', 'Dosis de radiación',
       ],
     },
+    widget: {
+      title: 'Tu pantalla de inicio, convertida.',
+      lead: 'Añade el widget de Measuro y mira una conversión sin abrir la app. Déjalo vacío para seguir tus unidades favoritas, o elige un par de unidades y un valor. También hay versiones para la pantalla de bloqueo.',
+      alt: 'Pantalla de inicio de iPhone con el widget de Measuro convirtiendo 1 tonelada métrica en kilogramos, gramos, miligramos y microgramos.',
+    },
+    popular: { title: 'Conversiones populares', lead: 'Respuestas rápidas, con la fórmula y una tabla.' },
+    faq: {
+      title: 'Preguntas sobre Measuro',
+      items: [
+        ['¿Qué es Measuro?', 'Measuro es un conversor de unidades gratis para iPhone. Escribes un valor una vez y lo ves a la vez en todas las unidades de la categoría. Tiene 29 categorías y 271 unidades, incluye calculadora y funciona sin conexión.'],
+        ['¿Measuro es gratis?', 'Sí. Measuro es gratis para descargar y usar, y se financia con anuncios. Una compra única de «Sin publicidad» los elimina para siempre.'],
+        ['¿Measuro funciona sin conexión?', 'Sí. Todas las conversiones se calculan en tu iPhone, así que no necesitas internet.'],
+        ['¿Qué unidades convierte Measuro?', 'Veintinueve categorías: longitud, área, volumen, masa, velocidad, temperatura, cocina, ritmo, talla de calzado, presión, energía, potencia, tiempo, almacenamiento digital, velocidad de datos, consumo de combustible, ángulo, fuerza, par motor, frecuencia, densidad, caudal, luminosidad, intensidad eléctrica, tensión eléctrica, viscosidad, aceleración, radiactividad y dosis de radiación.'],
+        ['¿Measuro convierte divisas?', 'No. Measuro convierte unidades, no dinero. Para tipos de cambio, Albea Systems también hace Divix, un conversor de divisas gratuito.'],
+        ['¿Measuro tiene widget?', 'Sí. Un widget en la pantalla de inicio muestra una conversión. Déjalo vacío para seguir tus unidades favoritas, o elige un par de unidades y un valor. También admite widgets en la pantalla de bloqueo, Siri y Atajos.'],
+        ['¿En qué idiomas está Measuro?', 'En catorce: inglés, español, francés, alemán, italiano, portugués (Brasil), ruso, árabe, hindi, tailandés, vietnamita, japonés, coreano y chino simplificado.'],
+        ['¿Quién hace Measuro?', 'Measuro lo hace Albea Systems, un desarrollador independiente.'],
+      ],
+    },
+    convert: { back: 'Todas las conversiones', home: 'Measuro' },
     free: {
       title: 'Gratis para usar',
       body: 'Measuro es gratis y se financia con anuncios. Una compra única de «Sin publicidad» los elimina para siempre.',

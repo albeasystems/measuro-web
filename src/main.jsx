@@ -1,15 +1,16 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import './index.css';
-import { content } from './content.js';
-import Home from './Home.jsx';
-import Legal from './Legal.jsx';
+import App, { routeFrom } from './App.jsx';
 
 const root = document.getElementById('root');
-const lang = root.dataset.lang in content ? root.dataset.lang : 'en';
-const page = root.dataset.page || 'home';
-const t = content[lang];
-
-createRoot(root).render(
-  <StrictMode>{page === 'home' ? <Home lang={lang} t={t} /> : <Legal page={page} t={t} />}</StrictMode>,
+const route = routeFrom({ lang: root.dataset.lang, page: root.dataset.page, slug: root.dataset.slug });
+const app = (
+  <StrictMode>
+    <App route={route} />
+  </StrictMode>
 );
+
+// Pages are prerendered at build time, so crawlers get real HTML; the browser then takes it over.
+if (root.hasChildNodes()) hydrateRoot(root, app);
+else createRoot(root).render(app);

@@ -93,6 +93,7 @@ p { margin: 0; }
 
   .nav-chip { padding-inline: 0.6rem; margin-inline: -0.35rem; font-weight: 560; }
   .foot-link { display: inline-flex; align-items: center; min-height: 2.75rem; }
+  .link-block { display: flex; align-items: center; min-height: 3.25rem; }
   .link-inline { text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
   .btn-sm::after { content: ''; position: absolute; }
   .btn-sm { position: relative; }
@@ -121,6 +122,13 @@ p { margin: 0; }
     color: var(--color-muted); font: inherit; font-size: 0.9rem;
   }
   @media (hover: hover) { .pause:hover { color: var(--color-ink); } }
+
+  .chart { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .chart caption { text-align: left; font-weight: 650; font-size: 1.25rem; letter-spacing: -0.02em; padding-bottom: 0.9rem; }
+  .chart th, .chart td { text-align: left; padding: 0.7rem 0; border-top: 1px solid var(--color-line); }
+  .chart thead th { color: var(--color-muted); font-weight: 560; font-size: 0.95rem; }
+  .chart td:last-child, .chart th:last-child { text-align: right; }
+  .chart tbody td:last-child { font-weight: 620; }
 
   .skip { position: absolute; left: 1rem; top: -4rem; z-index: 50; }
   .skip:focus { top: 1rem; }
