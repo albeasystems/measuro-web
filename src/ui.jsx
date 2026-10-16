@@ -72,9 +72,9 @@ export function Header({ t, alt }) {
           Measuro
         </a>
         <nav className="flex items-center gap-4 sm:gap-6" aria-label="Measuro">
-          <a className="nav-link hidden md:inline" href={`${t.home}#features`}>{t.nav.features}</a>
-          <a className="nav-link hidden md:inline" href={`${t.home}#categories`}>{t.nav.categories}</a>
-          <a className="nav-link hidden lg:inline" href={`${t.home}#faq`}>{t.nav.faq}</a>
+          <a className="nav-link hidden md:inline-flex" href={`${t.home}#features`}>{t.nav.features}</a>
+          <a className="nav-link hidden md:inline-flex" href={`${t.home}#categories`}>{t.nav.categories}</a>
+          <a className="nav-link hidden lg:inline-flex" href={`${t.home}#faq`}>{t.nav.faq}</a>
           <a
             className="nav-link nav-chip"
             href={otherLang.href}
