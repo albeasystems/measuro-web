@@ -1,8 +1,8 @@
-import { CATEGORY_COLORS, DIVIX_STORE } from './content.js';
+import { BASE, CATEGORY_COLORS, DIVIX_STORE } from './content.js';
 import { Arrow, Footer, HappyPath, Header, Phone, StoreLink } from './ui.jsx';
 
 export default function Home({ lang, t }) {
-  const media = `/media/${lang}`;
+  const media = `${BASE}media/${lang}`;
   return (
     <>
       <a className="btn btn-sm skip" href="#main">{t.a11y.skip}</a>
@@ -141,7 +141,7 @@ function FinalCta({ t }) {
   return (
     <section className="band section text-center">
       <div className="wrap grid justify-items-center gap-8">
-        <img src="/icon-176.png" alt="" width="88" height="88" className="size-[5.5rem] rounded-[1.3rem] shadow-[0_10px_30px_-8px_rgb(0_0_0/0.35)]" />
+        <img src={`${BASE}icon-176.png`} alt="" width="88" height="88" className="size-[5.5rem] rounded-[1.3rem] shadow-[0_10px_30px_-8px_rgb(0_0_0/0.35)]" />
         <h2 className="display !text-[clamp(2.2rem,5.5vw,4rem)] max-w-[16ch]">{t.final.title}</h2>
         <StoreLink t={t}>{t.final.cta}</StoreLink>
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { APP_STORE, CONTACT } from './content.js';
+import { APP_STORE, BASE, CONTACT } from './content.js';
 
 export function usePrefersReducedMotion() {
   const [reduced, setReduced] = useState(false);
@@ -33,7 +33,7 @@ export function Arrow({ dir = 'right' }) {
 export function HappyPath({ lang, t }) {
   const reduced = usePrefersReducedMotion();
   const [paused, setPaused] = useState(false);
-  const base = `/media/${lang}`;
+  const base = `${BASE}media/${lang}`;
   const still = reduced || paused;
   return (
     <div className="grid justify-items-center gap-4">
@@ -68,7 +68,7 @@ export function Header({ t }) {
     <header className="border-b border-line bg-paper sticky top-0 z-40">
       <div className="wrap flex h-14 items-center justify-between gap-4">
         <a href={t.home} className="flex items-center gap-2.5 min-h-11 text-ink no-underline font-semibold text-[1.05rem] tracking-tight" aria-label="Measuro">
-          <img src="/icon-176.png" alt="" width="28" height="28" className="size-7 rounded-[0.4rem]" />
+          <img src={`${BASE}icon-176.png`} alt="" width="28" height="28" className="size-7 rounded-[0.4rem]" />
           Measuro
         </a>
         <nav className="flex items-center gap-4 sm:gap-6" aria-label="Measuro">

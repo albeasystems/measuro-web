@@ -6,6 +6,8 @@ import { resolve } from 'node:path';
 const pages = ['', 'en/', 'es/', 'en/privacy/', 'en/terms/', 'en/support/', 'es/privacy/', 'es/terms/', 'es/support/'];
 
 export default defineConfig({
+  // Set BASE_PATH=/measuro-web/ when building for GitHub Pages project sites.
+  base: process.env.BASE_PATH || '/',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {

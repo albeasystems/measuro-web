@@ -1,6 +1,9 @@
 // All copy lives here so Spanish and English are written side by side, not translated after the fact.
 // Facts come from the app itself: 29 categories, 271 units, works offline, calculator, widget, Shortcuts.
 
+// Prefix for every internal URL, so the site works at a domain root or under /repo-name/.
+export const BASE = import.meta.env.BASE_URL;
+
 export const APP_STORE = 'https://apps.apple.com/app/id6760968030';
 export const DIVIX_STORE = 'https://apps.apple.com/app/id6776141769';
 export const CONTACT = 'albeasystems@gmail.com';
@@ -11,8 +14,8 @@ export const CATEGORY_COLORS = ['#0a84ff', '#30d158', '#64d2ff', '#ff9f0a', '#ff
 export const content = {
   en: {
     htmlLang: 'en',
-    otherLang: { code: 'es', label: 'ES', name: 'Español', href: '/es/' },
-    home: '/en/',
+    otherLang: { code: 'es', label: 'ES', name: 'Español', href: `${BASE}es/` },
+    home: `${BASE}en/`,
     nav: { features: 'What it does', categories: 'Categories', get: 'Get the app' },
     hero: {
       headline: ['Type once.', 'Every unit answers.'],
@@ -125,8 +128,8 @@ export const content = {
 
   es: {
     htmlLang: 'es',
-    otherLang: { code: 'en', label: 'EN', name: 'English', href: '/en/' },
-    home: '/es/',
+    otherLang: { code: 'en', label: 'EN', name: 'English', href: `${BASE}en/` },
+    home: `${BASE}es/`,
     nav: { features: 'Qué hace', categories: 'Categorías', get: 'Descargar' },
     hero: {
       headline: ['Escribe una vez.', 'Responden todas las unidades.'],
